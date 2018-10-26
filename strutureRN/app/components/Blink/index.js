@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
   View,
+  Text,
 } from 'react-native';
 
 class Blink extends Component {
@@ -9,6 +10,13 @@ class Blink extends Component {
     this.state = {
       isShowingText: true,
     };
+    setInterval(() => {
+      this.setState(prevState => {
+        return {
+          isShowingText: !prevState.isShowingText,
+        };
+      });
+    }, 1000);
   }
 
   render() {

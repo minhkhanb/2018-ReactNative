@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {
   View,
+  Text,
 } from 'react-native';
+
+import Blink from '../../components/Blink';
 
 class BlinkText extends Component {
   render() {
